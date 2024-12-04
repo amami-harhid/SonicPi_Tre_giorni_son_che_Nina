@@ -1,2 +1,6 @@
-# SonicPi_Tre_giorni_son_che_Nina
-SonicPi / Tre giorni son che Nina
+# SonicPi Tre giorni son che Nina
+
+# VSCode 
+
+プラグイン 「Sonic Pi Extension」を利用して VSCodeで動かしています。
+
