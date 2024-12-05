@@ -11,11 +11,7 @@ define :p1_tick do
 end
 
 define :p1_000 do
-    sleep 3
-    play :e3, attack: 0, attack_level: 0.5, sustain: 0.5, sustain_level: 0.2, release: 0
-    sleep 0.5
-    play :g3, attack: 0, attack_level: 0.5, sustain: 0.5, sustain_level: 0.2, release: 0
-    sleep 0.5
+    v000
 end
 
 define :p1_001 do
@@ -111,17 +107,18 @@ define :p1_008 do
     sleep 1
 end
 define :p1_009 do
+    # ２拍目、４拍目の始まりを意識するため、16分音符は優しく
     play [:d3,:g3,:b3], attack: 0, attack_level: 1.0, sustain: 1.0, sustain_level: 0.5, release: 0
     sleep 1
     play [:c3,:fs3,:a3], attack: 0, attack_level: 1.0, sustain: 0.75, sustain_level: 0.5, release: 0
     sleep 0.75
-    play [:b2,:d3,:g3], attack: 0, attack_level: 1.0, sustain: 0.25, sustain_level: 0.5, release: 0
+    play [:b2,:d3,:g3], amp:0.5, attack: 0, attack_level: 1.0, sustain: 0.25, sustain_level: 0.5, release: 0
     sleep 0.25
     play [:d3,:g3,:b3], attack: 0, attack_level: 1.0, sustain: 1.0, sustain_level: 0.5, release: 0
     sleep 1
     play [:c3,:fs3,:a3], attack: 0, attack_level: 1.0, sustain: 0.75, sustain_level: 0.5, release: 0
     sleep 0.75
-    play [:b2,:d3,:g3], attack: 0, attack_level: 1.0, sustain: 0.25, sustain_level: 0.5, release: 0
+    play [:b2,:d3,:g3], amp:0.5, attack: 0, attack_level: 1.0, sustain: 0.25, sustain_level: 0.5, release: 0
     sleep 0.25
 end
 define :p1_010 do
@@ -207,16 +204,17 @@ define :p1_016 do
     sleep 0.5
 end
 define :p1_017 do
+    # 三連符は優しく(amp調整)
     play :e3, attack: 0, attack_level: 1.0, sustain: 1.0, sustain_level: 0.5, release: 0
     play :a3, attack: 0, attack_level: 1.0, sustain: 0.5, sustain_level: 0.5, release: 0
     sleep 0.5
     play :g3, attack: 0, attack_level: 1.0, sustain: 0.5, sustain_level: 0.5, release: 0
     sleep 0.5
-    play :g3, attack: 0, attack_level: 1.0, sustain: 0.3, sustain_level: 0.5, release: 0
+    play :g3, amp:0.5, attack: 0, attack_level: 1.0, sustain: 0.3, sustain_level: 0.5, release: 0
     sleep 1.0/3
-    play :fs3, attack: 0, attack_level: 1.0, sustain: 0.3, sustain_level: 0.5, release: 0
+    play :fs3, amp:0.5, attack: 0, attack_level: 1.0, sustain: 0.3, sustain_level: 0.5, release: 0
     sleep 1.0/3
-    play :e3, attack: 0, attack_level: 1.0, sustain: 0.3, sustain_level: 0.5, release: 0
+    play :e3, amp:0.5, attack: 0, attack_level: 1.0, sustain: 0.3, sustain_level: 0.5, release: 0
     sleep 1.0/3
     play :b3, attack: 0, attack_level: 1.0, sustain: 1.5, sustain_level: 0.5, release: 0
     sleep 1.5
@@ -238,7 +236,7 @@ define :p1_020 do
     v020
 end
 define :p1_021 do
-    v021
+    v019
 end
 define :p1_022 do
     play [:fs3,:e4], attack: 0, attack_level: 1.0, sustain: 2.0, sustain_level: 0.5, release: 0

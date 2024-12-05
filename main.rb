@@ -70,6 +70,8 @@ end
 v_counter = Start_bar_no
 live_loop :vocal, sync: :metro do
     use_synth :piano
+    # ヴォーカルだけ 1オクターブあげる
+    use_transpose +12 
     v_name = toName("v", v_counter)
     if v_name == "" then
         stop # live_loop 停止
