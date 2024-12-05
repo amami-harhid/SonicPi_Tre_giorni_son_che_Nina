@@ -5,7 +5,7 @@
 ######################################
 
 # Tempo
-use_bpm 74  # <--- 2倍速
+use_bpm 74  # <--- 譜面の指示どおり
 
 # １回の小節数
 BarCount = 27
@@ -45,10 +45,7 @@ live_loop :p1, sync: :metro do
     if p1_name == "" then
         stop # live_loop 停止
     else
-        # slicer (wave=3) SIN wave
-        with_fx :slicer, wave: 3, amp: 1.0 do
-            send p1_name
-        end
+        send p1_name
     end
     p1_counter += 1
 end
@@ -77,13 +74,10 @@ live_loop :vocal, sync: :metro do
     if v_name == "" then
         stop # live_loop 停止
     else
-        # echo 
-        with_fx :echo, phase: 0.125, decay: 2 do
-            # slicer (wave=3) SIN wave
-            with_fx :slicer, wave: 3, amp: 0.5 do
-                send v_name
-            end
-        end
+        # slicer (wave=3) SIN wave
+        #with_fx :slicer, wave: 3, amp: 0.5 do
+            send v_name
+        #end
     end
     v_counter += 1
 end
