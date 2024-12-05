@@ -8,23 +8,11 @@
 
 
 define :vtick do
-    play :e4, amp:1, attack: 0, attack_level: 1.0, sustain: 0.1, sustain_level: 0.5, release: 0
-    sleep 1
-    play :e4, amp:0.3, attack: 0, attack_level: 1.0, sustain: 0.1, sustain_level: 0.5, release: 0
-    sleep 1
-    play :e4, amp:0.3, attack: 0, attack_level: 1.0, sustain: 0.1, sustain_level: 0.5, release: 0
-    sleep 1
-    play :e4, amp:0.3, attack: 0, attack_level: 1.0, sustain: 0.1, sustain_level: 0.5, release: 0
-    sleep 1
+    sleep 4
 end
 
 define :v000 do
-    play :e4, amp:1, attack: 0, attack_level: 1.0, sustain: 0.1, sustain_level: 0.5, release: 0
-    sleep 1
-    play :e4, amp:0.3, attack: 0, attack_level: 1.0, sustain: 0.1, sustain_level: 0.5, release: 0
-    sleep 1
-    play :e4, amp:0.3, attack: 0, attack_level: 1.0, sustain: 0.1, sustain_level: 0.5, release: 0
-    sleep 1
+    sleep 3
     play :e4, attack: 0, attack_level: 1.0, sustain: 0.5, sustain_level: 0.5, release: 0
     sleep 0.5
     play :g4, attack: 0, attack_level: 1.0, sustain: 0.5, sustain_level: 0.5, release: 0

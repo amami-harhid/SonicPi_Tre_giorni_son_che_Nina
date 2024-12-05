@@ -5,7 +5,7 @@
 ######################################
 
 # Tempo
-use_bpm 74*2  # <--- 2倍速
+use_bpm 74  # <--- 2倍速
 
 # １回の小節数
 BarCount = 27
@@ -26,13 +26,13 @@ end
 
 
 # 開始小節No( 開始位置を変えることができます )
-Start_bar_no = -1
+Start_bar_no = -1  # -1 のとき "#{prefix}tick"から始める
 
 ############################################
 # metoronome 同期をとるための live_loop
 ############################################
 live_loop :metro do
-    sleep 4
+    sleep 4  # 4 拍(= 1小節)
 end
 
 ############################################
@@ -43,7 +43,7 @@ live_loop :p1, sync: :metro do
     use_synth :piano
     p1_name = toName("p1_", p1_counter)
     if p1_name == "" then
-        stop
+        stop # live_loop 停止
     else
         # slicer (wave=3) SIN wave
         with_fx :slicer, wave: 3, amp: 1.0 do
@@ -60,7 +60,7 @@ live_loop :p2, sync: :metro do
     use_synth :piano
     p2_name = toName("p2_", p2_counter)
     if p2_name == "" then
-        stop
+        stop # live_loop 停止
     else
         send p2_name
     end
@@ -72,14 +72,17 @@ end
 ############################################
 v_counter = Start_bar_no
 live_loop :vocal, sync: :metro do
-    use_synth :pretty_bell
+    use_synth :chiplead
     v_name = toName("v", v_counter)
     if v_name == "" then
-        stop
+        stop # live_loop 停止
     else
-        # slicer (wave=3) SIN wave
-        with_fx :slicer, wave: 3, amp: 0.5 do
-            send v_name
+        # echo 
+        with_fx :echo, phase: 0.125, decay: 2 do
+            # slicer (wave=3) SIN wave
+            with_fx :slicer, wave: 3, amp: 0.5 do
+                send v_name
+            end
         end
     end
     v_counter += 1

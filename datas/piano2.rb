@@ -11,22 +11,21 @@ define :p2_tick do
 end
 
 define :p2_000 do
-    sleep 4
+    2.times do
+        play :e2, attack: 0, attack_level: 0.5, sustain: 1.0, sustain_level: 0.2, release: 0
+        sleep 1
+        play :e1, attack: 0, attack_level: 0.5, sustain: 1.0, sustain_level: 0.2, release: 0
+        sleep 1
+    end
 end
 
 define :p2_001 do
-    play :e1, attack: 0, attack_level: 0.5, sustain: 0.5, sustain_level: 0.2, release: 0
-    sleep 0.5
-    play :b1, attack: 0, attack_level: 0.5, sustain: 0.5, sustain_level: 0.2, release: 0
-    sleep 0.5
-    play :e2, attack: 0, attack_level: 0.5, sustain: 0.5, sustain_level: 0.2, release: 0
-    sleep 0.5
-    play :b1, attack: 0, attack_level: 0.5, sustain: 0.5, sustain_level: 0.2, release: 0    
-    sleep 0.5
-    play :e1, attack: 0, attack_level: 0.5, sustain: 0.5, sustain_level: 0.2, release: 0
-    sleep 0.5
-    play :b1, attack: 0, attack_level: 0.5, sustain: 0.5, sustain_level: 0.2, release: 0
-    sleep 0.5
+    play :e1, attack: 0, attack_level: 0.5, sustain: 1.0, sustain_level: 0.2, release: 0
+    sleep 1
+    play :e2, attack: 0, attack_level: 0.5, sustain: 1.0, sustain_level: 0.2, release: 0
+    sleep 1
+    play :e1, attack: 0, attack_level: 0.5, sustain: 1.0, sustain_level: 0.2, release: 0
+    sleep 1
     play :e2, attack: 0, attack_level: 0.5, sustain: 0.5, sustain_level: 0.2, release: 0
     sleep 0.5
     play :b1, attack: 0, attack_level: 0.5, sustain: 0.5, sustain_level: 0.2, release: 0    
